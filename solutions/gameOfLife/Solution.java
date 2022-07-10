@@ -1,6 +1,3 @@
-import py4j.GatewayServer;
-
-
 class Solution {
 
 
@@ -9,7 +6,7 @@ class Solution {
       int[][] board =  { {0,1,0} ,{0,0,1},{1,1,1} , {0,0,0} };
       getBoard(board);
       gameOfLife(board);
-      System.out.println("NEW GENERATION!");
+      System.out.println("New Generation!");
       getBoard(board);
       }
 
@@ -64,36 +61,4 @@ class Solution {
             }
         }
     }
-
-    // public static void gameOfLife(int[][] board) {
-    //     int[][] updatedBoard = new int[board.length][board[0].length];
-    //     int counter;
-
-    //     for(int i = 0; i<board.length; ++i){
-    //         for(int j = 0 ; j<board[0].length ; ++j){
-    //             counter = 0;
-    //             for(int n=1;n>-2;--n){
-    //                 for(int m=1;m>-2;--m){
-    //                     try{
-    //                         if(board[i+n][j+m]==1 && ( n!= 0 || m!=0) ){
-    //                                 ++counter;
-    //                          }
-    //                     }
-    //                     catch(Exception e){
-    //                         continue;
-    //                     }
-    //                 }
-    //             }
-
-    //             updatedBoard[i][j] =    (( (counter==2 || counter==3) && board[i][j] == 1) ||
-    //                                     ((counter == 3) && board[i][j] == 0)) ? 1 : 0;
-    //         }
-    //     }
-
-    //     for(int i = 0 ; i < board.length ; ++i){
-    //         for(int j = 0 ; j < board[0].length ; ++j){
-    //             board[i][j] = updatedBoard[i][j];
-    //         }
-    //     }
-    // }
 }
